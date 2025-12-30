@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="form-card">
+        <h2>Job Application</h2>
+        <p>Apply for your desired position</p>
+
+        <form>
+            <div class="row">
+                <div class="input-box">
+                    <input type="text" required>
+                    <label>Full Name</label>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" required>
+                    <label>Email Address</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-box">
+                    <input type="tel" required>
+                    <label>Phone Number</label>
+                </div>
+
+                <div class="input-box">
+                    <select required>
+                        <option value="" disabled selected></option>
+                        <option>Frontend Developer</option>
+                        <option>Backend Developer</option>
+                        <option>UI/UX Designer</option>
+                        <option>Intern</option>
+                    </select>
+                    <label>Position</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-box">
+                    <select required>
+                        <option value="" disabled selected></option>
+                        <option>Fresh</option>
+                        <option>1 - 2 Years</option>
+                        <option>3 - 5 Years</option>
+                        <option>5+ Years</option>
+                    </select>
+                    <label>Experience</label>
+                </div>
+
+                <div class="input-box file-box">
+                    <input type="file" required>
+                    <label></label>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <textarea required></textarea>
+                <label>Why should we hire you?</label>
+            </div>
+
+            <button type="submit">Apply Now</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

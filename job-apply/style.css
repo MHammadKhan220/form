@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 20px;
+}
+
+.form-card{
+    max-width: 720px;
+    margin: auto;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.35);
+    animation: slideUp 1s ease;
+}
+
+@keyframes slideUp{
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.form-card h2{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.form-card p{
+    text-align: center;
+    color: #ddd;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.row{
+    display: flex;
+    gap: 20px;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+    width: 100%;
+    padding: 12px 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.9);
+    font-size: 14px;
+}
+
+.input-box textarea{
+    resize: none;
+    height: 100px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: #666;
+    font-size: 13px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label,
+.input-box select:focus + label,
+.input-box select:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label{
+    top: -8px;
+    background: #2c5364;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+}
+
+button{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+    .row{
+        flex-direction: column;
+    }
+}
